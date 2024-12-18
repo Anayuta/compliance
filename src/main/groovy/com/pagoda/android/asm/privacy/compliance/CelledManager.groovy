@@ -7,6 +7,7 @@ class CelledManager {
 
     CelledManager() {
         baseMethodCalleds.add(new SettingsCalled())
+        baseMethodCalleds.add(new ReflectCalled())
     }
 
     void init() {
