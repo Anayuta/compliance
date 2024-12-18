@@ -4,7 +4,7 @@ import com.pagoda.android.asm.privacy.compliance.utils.MethodFieldUtils
 
 class ComplianceConfig {
     /**
-     * 是否启用插件
+     * 是否禁用插件
      */
     public boolean disablePlugin = false
     /**
@@ -16,11 +16,11 @@ class ComplianceConfig {
      * @params 1 代表替换方法体
      * @params 0 不替换
      */
-    public int methodStatus = 0
+    public int methodStatus = 1
     /**
      * 白名单列表，处于白名单的方法不会根据{@link #methodStatus}被处理
      */
-    public List<String> whiteList = []
+    public List<String> whiteList = ["com.pagoda.android.privacy_compliance.ReplaceMethodUtils"]
 
     /***
      * hook代理方法类
